@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#CFC8BC"/><stop offset="0.48" stop-color="#9AA1AB"/>
+<stop offset="0.52" stop-color="#7C7266"/><stop offset="1" stop-color="#463C31"/>
+</linearGradient>
+<filter id="n2"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3"/><feColorMatrix type="saturate" values="0"/></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#s)"/>
+<path d="M0 500 L220 420 L400 480 L620 390 L850 470 L1100 400 L1340 470 L1600 420 L1600 520 L0 520 Z" fill="#5C6470" fill-opacity="0.65"/>
+<path d="M0 520 L1600 520 L1600 1000 L0 1000 Z" fill="#6E6154" fill-opacity="0.35"/>
+<g fill="#2E2823" fill-opacity="0.5">
+<circle cx="420" cy="700" r="9"/><circle cx="520" cy="720" r="9"/><circle cx="640" cy="690" r="9"/>
+<circle cx="780" cy="730" r="9"/><circle cx="900" cy="700" r="9"/><circle cx="1040" cy="720" r="9"/>
+</g>
+<rect width="1600" height="1000" filter="url(#n2)" opacity="0.16"/>
+<text x="56" y="940" font-family="Helvetica,Arial,sans-serif" font-size="22" letter-spacing="6" fill="#F6F3EC" fill-opacity="0.6">IMAGEN PENDIENTE</text>
+</svg>

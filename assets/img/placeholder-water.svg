@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#D9CFC0"/><stop offset="0.42" stop-color="#B9A590"/>
+<stop offset="0.62" stop-color="#7E8896"/><stop offset="1" stop-color="#3B4654"/>
+</linearGradient>
+<filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3"/><feColorMatrix type="saturate" values="0"/></filter>
+</defs>
+<rect width="900" height="1200" fill="url(#g)"/>
+<g stroke="#F6F3EC" stroke-opacity="0.18" fill="none">
+<path d="M0 760 Q225 730 450 760 T900 760"/><path d="M0 820 Q225 792 450 820 T900 820"/>
+<path d="M0 880 Q225 850 450 880 T900 880"/><path d="M0 950 Q225 918 450 950 T900 950"/>
+<path d="M0 1030 Q225 998 450 1030 T900 1030"/>
+</g>
+<circle cx="640" cy="300" r="90" fill="#F6F3EC" fill-opacity="0.12"/>
+<rect width="900" height="1200" filter="url(#n)" opacity="0.16"/>
+<text x="46" y="1150" font-family="Helvetica,Arial,sans-serif" font-size="20" letter-spacing="5" fill="#F6F3EC" fill-opacity="0.55">IMAGEN PENDIENTE</text>
+</svg>
