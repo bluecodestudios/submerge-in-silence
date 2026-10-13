@@ -35,10 +35,10 @@
     uRipple:   { value: 0 },
     uScroll:   { value: 0 },
     uQuality:  { value: isTouch ? 0.0 : 1.0 },
-    uDeep:     { value: new THREE.Color('#1C2026') },
-    uMid:      { value: new THREE.Color('#3B4654') },
-    uLight:    { value: new THREE.Color('#B9A590') },
-    uCream:    { value: new THREE.Color('#F6F3EC') }
+    uDeep:     { value: new THREE.Color('#102018') },
+    uMid:      { value: new THREE.Color('#2E5B51') },
+    uLight:    { value: new THREE.Color('#7FB3A3') },
+    uCream:    { value: new THREE.Color('#F2F5F2') }
   };
 
   const vert = `
