@@ -81,7 +81,7 @@
     if (!hasGSAP || reduced) {
       if (loader) loader.remove();
       $$('[data-reveal]').forEach((el) => { el.style.opacity = 1; el.style.transform = 'none'; });
-      $$('[data-split]').forEach(splitWords);
+      $$('[data-split]').forEach((el) => { splitWords(el); el.classList.add('is-revealed'); });
       buildScrollAnimations();
       return;
     }
@@ -108,7 +108,10 @@
         }, 1.85);
     }
 
-    tl.to(heroWords, { yPercent: 0, duration: 1.5, stagger: 0.06, ease: 'expo.out' }, '-=0.75')
+    tl.to(heroWords, {
+      yPercent: 0, duration: 1.5, stagger: 0.06, ease: 'expo.out',
+      onComplete: () => $$('.hero__title [data-split]').forEach((el) => el.classList.add('is-revealed'))
+    }, '-=0.75')
       .to('.hero__eyebrow', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '<0.1')
       .to('.hero__lede', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '<0.15')
       .to('.hero__actions', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '<0.1')
@@ -125,7 +128,7 @@
 
     // reduced motion: everything visible, nothing moves
     if (reduced) {
-      $$('[data-split], [data-split-words]').forEach(splitWords);
+      $$('[data-split], [data-split-words]').forEach((el) => { splitWords(el); el.classList.add('is-revealed'); });
       $$('[data-reveal]').forEach((el) => { el.style.opacity = 1; el.style.transform = 'none'; });
       return;
     }
@@ -137,6 +140,7 @@
       gsap.set(words, { yPercent: 110 });
       gsap.to(words, {
         yPercent: 0, duration: 1.15, ease: 'expo.out', stagger: 0.035,
+        onComplete: () => el.classList.add('is-revealed'),
         scrollTrigger: { trigger: el, start: 'top 88%', once: true }
       });
     });

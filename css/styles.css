@@ -713,6 +713,11 @@ body.menu-open .menu__list a{opacity:1;transform:none;transition:opacity .6s var
 .js [data-reveal]{opacity:0;transform:translateY(22px)}
 html:not(.js) .loader{display:none}
 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.14em;margin-bottom:-.14em}
+/* la mascara solo recorta mientras la palabra entra; al terminar se abre
+   para que los descendentes (g, y, p, q, j) nunca queden cortados */
+.is-revealed,
+.is-revealed .w,
+[data-split-words] .w{overflow:visible}
 .word{display:inline-block;will-change:transform}
 
 /* ---------- 28. RESPONSIVE ---------- */
