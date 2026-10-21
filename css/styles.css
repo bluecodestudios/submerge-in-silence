@@ -592,6 +592,17 @@ body.menu-open .menu__list a{opacity:1;transform:none;transition:opacity .6s var
 .room__specs dt{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:.16em;text-transform:uppercase;color:var(--bark);opacity:.7}
 .room__specs dd{font-family:var(--display);font-size:1.05rem}
 .room__copy{color:rgba(34,48,44,.75);max-width:40ch;position:relative;z-index:2}
+/* par de botones de pago dentro de cada tarjeta */
+.room__pay{
+  position:relative;z-index:2;width:100%;
+  display:grid;gap:.45rem;justify-items:start;
+}
+.room__pay .btn{width:100%}
+.room__pay span{
+  font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--bark);opacity:.7;margin-bottom:.5rem;
+}
+.room__pay span:last-child{margin-bottom:0}
 .room .btn{position:relative;z-index:2}
 .room--private{background:var(--shell)}
 .room--private .room__flag{background:var(--shell)}
@@ -762,6 +773,10 @@ html:not(.js) .loader{display:none}
   .sec--silence{text-align:left}
   .h1--center{text-align:left;margin-inline:0}
   .sec--quote p{max-width:100%}
+}
+@media (max-width:640px){
+  /* la etiqueta no debe pisar el titulo ni el precio en pantallas estrechas */
+  .room__flag{position:static;order:-1;align-self:flex-start}
 }
 @media (max-width:520px){
   .hero__actions .btn{width:100%}
